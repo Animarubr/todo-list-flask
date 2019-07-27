@@ -34,7 +34,7 @@ def index():
 		return render_template('index.html', tasks=tasks)	
 
 
-@app.route('/delete/<int:id>'):
+@app.route('/delete/<int:id>')
 def delete(id):
 	task_to_delete = Todo.query.get_or_404(id)
 
@@ -45,7 +45,7 @@ def delete(id):
 	except:
 		return 'There was a problem deleting the task'
 	
-@app.route('/update/<int:id', methods=['GET','POST'])
+@app.route('/update/<int:id>', methods=['GET','POST'])
 def update(id):
 	task = Todo.query.get_or_404(id)
 

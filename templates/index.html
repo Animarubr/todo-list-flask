@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block head %}
-<title>Tesk Master</title>
+<title>Task Master</title>
 {% endblock %}
 
 {% block body %}
@@ -17,8 +17,8 @@
 		</tr>
 		{% for task in tasks %}
 			<tr>
-				<td>{{ tesk.content }}</td>
-				<td>{{ task.date_created() }}</td>
+				<td>{{ task.content }}</td>
+				<td>{{ task.date_created }}</td>
 				<td>
 					<a href="/delete/{{ task.id }}">Delete</a>
 					<br>
@@ -32,7 +32,7 @@
 
 	<form action="/" method="POST">
 		<input type="text" name="content" id="content">
-		<input type="submit" value="Add Tesk">
+		<input type="submit" value="Add Task">
 
 	</form>
 </div>
